@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="th">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ดนตรีไทยท้าทาย — คู่มือและกติกา (ฉบับสมบูรณ์)</title>
+    <style>
+        :root {
+            --bg: #fcfbf8;
+            --card: #fff;
+            --muted: #666;
+            --accent: #2b7a78;
+            --accent-light: #f3f7f6
+        }
+
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+            background: var(--bg);
+            color: #111;
+            margin: 0;
+            padding: 24px;
+            line-height: 1.6;
+        }
+
+        .wrap {
+            max-width: 960px;
+            margin: 0 auto
+        }
+
+        header {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            border-bottom: 2px solid var(--accent-light);
+            padding-bottom: 16px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.6rem;
+            color: var(--accent);
+        }
+
+        h2,
+        h3 {
+            margin: 20px 0 10px 0;
+            color: #222;
+        }
+
+        .intro {
+            margin: 12px 0;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 20px 24px;
+            box-shadow: 0 6px 18px rgba(10, 10, 10, 0.06)
+        }
+
+        ol li {
+            margin: 8px 0;
+            padding-left: 8px;
+        }
+
+        ol ol li {
+            margin-top: 6px;
+        }
+
+        ul li {
+            margin: 8px 0;
+        }
+
+        label {
+            display: block;
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        input[type=number],
+        input[type=text] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: var(--accent);
+            color: white;
+            border: 0;
+            padding: 10px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s ease;
+        }
+
+        button:hover {
+            background: #1e5755;
+        }
+
+        button.reset {
+            background: #aaa;
+        }
+
+        button.reset:hover {
+            background: #888;
+        }
+
+        .pdf-links a {
+            display: block;
+            color: var(--accent);
+            text-decoration: none;
+            margin: 6px 0;
+            font-weight: 600;
+        }
+
+        .pdf-links a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 18px;
+            color: var(--muted);
+            font-size: 0.9rem;
+            text-align: center;
+            border-top: 1px solid #eee;
+            padding-top: 16px;
+        }
+
+        .section-title {
+            border-left: 4px solid var(--accent);
+            padding-left: 10px;
+            margin: 24px 0 12px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 12px;
+            font-size: 0.95rem;
+        }
+
+        table th,
+        table td {
+            border: 1px solid #eee;
+            padding: 10px 12px;
+            text-align: left
+        }
+
+        table th {
+            background: var(--accent-light);
+            font-weight: 600;
+        }
+
+        pre {
+            background: #fafafa;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #eee;
+            overflow-x: auto;
+        }
+
+        /* Responsive Grid */
+        @media (max-width:880px) {
+            .grid {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div>
+                <h1>ดนตรีไทยท้าทาย — คู่มือกติกา (ฉบับสมบูรณ์)</h1>
+                <div class="intro">เอกสารฉบับสมบูรณ์นี้อธิบายวัตถุประสงค์ อุปกรณ์ กติกาการเล่น การ์ดพิเศษ การให้คะแนน
+                    และเคล็ดลับสำหรับครูผู้สอน โดยอ้างอิงกติกาจากโค้ดล่าสุด</div>
+            </div>
+        </header>
+
+        <main class="grid">
+            <section class="card">
+                <h2 class="section-title">สารบัญ</h2>
+                <ol>
+                    <li>วัตถุประสงค์และหลักการ</li>
+                    <li>อุปกรณ์ในเกม</li>
+                    <li>การเตรียมเกม</li>
+                    <li>ลำดับการเล่น (Turn Sequence)</li>
+                    <li>การแย่งตอบ (การ์ดความรู้/การ์ดพิเศษ)</li>
+                    <li>การ์ดพิเศษและคำอธิบาย</li>
+                    <li>การจบเกมและการให้คะแนน</li>
+                    <li>กรณีเสมอและบทลงโทษ</li>
+                    <li>ตัวอย่างการเล่น</li>
+                    <li>เคล็ดลับสำหรับครู (จากหลักการออกแบบนวัตกรรม)</li>
+                    <li>รูปแบบการเล่น (Variants)</li>
+                </ol>
+
+                <h3 class="section-title">1. วัตถุประสงค์และหลักการ</h3>
+                [cite_start]<p>นวัตกรรม "Thai Music Card Game : ดนตรีไทยท้าทายไพ่ความรู้" [cite: 16, 21] [cite_start]นี้
+                    ออกแบบมาเพื่อแก้ปัญหาการเรียนดนตรีไทยแบบเดิม [cite: 18] [cite_start]ที่อาจเน้นการท่องจำ [cite: 19]
+                    [cite_start]และขาดแรงจูงใจ [cite: 19] โดยมีวัตถุประสงค์เพื่อ:</p>
+                <ul>
+                    [cite_start]<li>ใช้หลักการ **Learn by Playing (เรียนรู้ผ่านการเล่น)** [cite: 29] [cite_start]และ
+                        **Active Learning** [cite: 29] [cite_start]เปลี่ยนห้องเรียนให้มีชีวิตชีวา [cite: 21]</li>
+                    [cite_start]<li>ฝึกทักษะการคิดเชิงกลยุทธ์, การจำแนกประเภทเครื่องดนตรี, และการสื่อสาร [cite: 31]</li>
+                    [cite_start]<li>พัฒนา Soft Skills ที่สำคัญ เช่น การทำงานร่วมกัน, ความคิดสร้างสรรค์,
+                        และการมีน้ำใจนักกีฬา [cite: 32]</li>
+                </ul>
+
+                <h3 class="section-title">2. อุปกรณ์ในเกม</h3>
+                <ul>
+                    <li>**ชุดการ์ดเกม** ประกอบด้วย:
+                        <ul>
+                            [cite_start]<li>**การ์ดเครื่องดนตรี:** (เช่น จะเข้ [cite: 1, 2, 3][cite_start], กระจับปี่
+                                [cite: 5, 7, 9][cite_start], ซอด้วง [cite: 10, 11][cite_start], ซออู้ [cite: 13, 15])
+                                บนการ์ดจะมีค่าคะแนนระบุไว้ (เช่น 1–3 คะแนน)</li>
+                            [cite_start]<li>**การ์ดความรู้:** คำถามที่เกี่ยวข้องกับดนตรีไทย เช่น เสียงและจังหวะ [cite:
+                                23][cite_start], ลักษณะของเพลงไทยเดิม [cite: 24][cite_start], หรือบุคคลสำคัญทางดนตรีไทย
+                                [cite: 25]</li>
+                            <li>**การ์ดพิเศษ:** การ์ดที่ใช้สร้างกลยุทธ์หรือเปลี่ยนสถานการณ์ (ดูรายละเอียดในหัวข้อ 6)
+                            </li>
+                        </ul>
+                    </li>
+                    <li>**กองกลาง:** กองจั่วสำหรับการ์ดที่เหลือ (คว่ำหน้า)</li>
+                    <li>**พื้นที่กลางวง:** สำหรับวางการ์ดเมื่อมีการเล่นการ์ดความรู้/การ์ดพิเศษ (เพื่อแย่งตอบ)</li>
+                    <li>**กระดาษและปากกา:** สำหรับนับคะแนน (หรือใช้เครื่องมือช่วยคำนวณในหน้าเว็บนี้)</li>
+                </ul>
+
+                <h3 class="section-title">3. การเตรียมเกม</h3>
+                <ol>
+                    [cite_start]<li>รองรับผู้เล่น 2–6 คน (แนะนำ 3–5 คน สำหรับชั้นเรียน) [cite: 37]</li>
+                    <li>สับการ์ดทั้งหมดให้เข้ากัน วางเป็นกองกลางแบบคว่ำหน้า</li>
+                    [cite_start]<li>แจกการ์ดให้ผู้เล่นคนละ 5 ใบ [cite: 39] (แจกวนทีละใบ)</li>
+                    <li>สุ่มเลือกผู้เล่นคนแรก (เช่น เป่ายิงฉุบ หรือตามที่ครูกำหนด)</li>
+                    <li>ผู้เล่นแต่ละคนเตรียมพื้นที่ "กองคะแนน" (ไว้ข้างหน้าตนเอง) สำหรับวางการ์ดที่เล่นสำเร็จแล้ว</li>
+                </ol>
+
+                <h3 class="section-title">4. ลำดับการเล่น (Turn Sequence)</h3>
+                <p>กติกาหลักของเกมนี้ (ตามโค้ดล่าสุด) คือการพยายามลงการ์ดที่มีค่าสูงขึ้นเรื่อยๆ</p>
+                <ol>
+                    <li>ผู้เล่นคนเริ่ม (Player 1) ทำการเล่นดังนี้:
+                        <ol type="a">
+                            <li>เลือก **การ์ดเครื่องดนตรี 1 ใบ** จากมือ วางหงายไว้ข้างหน้าตนเองใน "กองคะแนน"</li>
+                            <li>จั่วการ์ดจากกองกลาง 1 ใบ (เพื่อให้การ์ดในมือครบ 5 ใบเท่าเดิม)</li>
+                        </ol>
+                    </li>
+                    <li>ผู้เล่นคนถัดไป (วนตามเข็มนาฬิกา) ต้องเล่น **การ์ดเครื่องดนตรี** ที่มีค่าคะแนน (ตัวเลขบนการ์ด)
+                        <strong>เท่ากับหรือมากกว่า</strong> การ์ดใบสุดท้ายที่ผู้เล่นคนก่อนหน้าวางไว้
+                        <ul>
+                            <li>ตัวอย่าง: Player A วาง "ซออู้" (2 คะแนน) Player B ต้องวางการ์ด 2 หรือ 3 คะแนนเท่านั้น
+                            </li>
+                        </ul>
+                    </li>
+                    <li>หากผู้เล่นคนถัดไป **ไม่สามารถ** หรือ **ไม่ต้องการ** วางการ์ดเครื่องดนตรีตามเงื่อนไข (เช่น
+                        มีแต่การ์ด 1 คะแนน) ผู้เล่นคนนั้นจะต้อง:
+                        <ol type="a">
+                            <li>ผ่าน (Pass) และจั่วการ์ด 1 ใบ (เป็นการลงโทษ)</li>
+                            <li>หรือ, เล่น "การ์ดความรู้" หรือ "การ์ดพิเศษ" (ดูหัวข้อ 5)</li>
+                        </ol>
+                    </li>
+                    <li>หากกองกลางหมด ให้สับการ์ดที่ถูกทิ้ง (ถ้ามี) มาเป็นกองจั่วใหม่
+                        หรือเล่นต่อจนกว่าการ์ดในมือผู้เล่นหมด</li>
+                </ol>
+
+                <h3 class="section-title">5. การแย่งตอบ (เมื่อเล่นการ์ดความรู้/การ์ดพิเศษ)</h3>
+                <p>หากผู้เล่นไม่สามารถ/ไม่ต้องการเล่นการ์ดเครื่องดนตรีตามลำดับ (ข้อ 4.3) เขาสามารถ "ท้าทาย"
+                    วงด้วยการ์ดความรู้หรือการ์ดพิเศษได้</p>
+                <ol>
+                    <li>ผู้เล่นวาง **การ์ดความรู้** หรือ **การ์ดพิเศษ** 1 ใบ ลงกลางวง (ไม่ใช่กองคะแนนของตน)</li>
+                    [cite_start]<li>ผู้วางการ์ดอ่านคำถาม (ถ้าเป็นการ์ดความรู้) [cite: 45]
+                        หรือประกาศใช้การ์ดพิเศษให้ชัดเจน</li>
+                    <li>ผู้วางการ์ดนับ "3... 2... 1..." ช้าๆ</li>
+                    <li>ผู้เล่นคนอื่นๆ (รวมถึงผู้วาง) แย่งกันใช้มือแตะการ์ดใบนั้นที่กลางวง (ต้องแตะอย่างสุภาพ)</li>
+                    <li>ผู้ที่แตะการ์ดได้เป็นคนแรก:
+                        <ul>
+                            <li>**(การ์ดความรู้):** ได้สิทธิ์ตอบคำถามนั้น
+                                <ul>
+                                    [cite_start]<li><strong>ตอบถูก:</strong>
+                                        ผู้ตอบจะได้รับการ์ดใบนั้นไปไว้ในกองคะแนนของตน [cite: 46]</li>
+                                    [cite_start]<li><strong>ตอบผิด:</strong> ผู้ตอบต้อง "เสียการ์ด" 1 ใบ [cite: 47]
+                                        จากกองคะแนนของตน (ถ้ามี) หรือจากบนมือ (หากไม่มีกองคะแนน) วางไว้ใต้กองจั่ว</li>
+                                </ul>
+                            </li>
+                            <li><strong>(การ์ดพิเศษ):</strong> ผู้ที่แตะได้ จะเป็นผู้ "ได้รับผล" ของการ์ดนั้น (เช่น
+                                หากเป็นการ์ด "ขโมยการ์ด" ผู้ที่แตะได้จะเป็นคนขโมย ไม่ใช่คนวาง)</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h3 class="section-title">6. การ์ดพิเศษ (รายละเอียดตามโค้ดล่าสุด)</h3>
+                <p>การ์ดพิเศษใช้ผ่านกติกา "การแย่งตอบ" (หัวข้อ 5) ผู้ที่แตะการ์ดได้จะได้รับผลของการ์ดนั้น</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ชื่อการ์ด</th>
+                            <th>คำอธิบาย</th>
+                            <th>ข้อจำกัด/หมายเหตุ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>แลกการ์ดในมือ 1 ใบ</td>
+                            <td>ผู้ที่แตะได้ เลือกผู้เล่น 1 คน แล้วแลกการ์ดบนมือ 1 ใบ (แบบสุ่มหรือไม่สุ่ม แล้วแต่ตกลง)
+                            </td>
+                            <td>ผู้ถูกเลือกต้องยอมแลก</td>
+                        </tr>
+                        <tr>
+                            <td>ข้ามตาผู้เล่นคนถัดไป</td>
+                            <td>ผู้เล่นคนถัดไป (ตามลำดับปกติ) จะถูกข้ามตาในรอบนั้น</td>
+                            <td>มีผลทันทีหลังการแย่งตอบจบลง</td>
+                        </tr>
+                        <tr>
+                            <td>ขโมยการ์ดเครื่องดนตรี 1 ใบ</td>
+                            <td>ผู้ที่แตะได้ เลือกขโมยการ์ด 1 ใบ จากกองคะแนนของผู้เล่นคนใดก็ได้ มาเป็นของตน</td>
+                            <td>ไม่สามารถขโมยการ์ดบนมือ</td>
+                        </tr>
+                        <tr>
+                            <td>ย้อนกลับลำดับการเล่น</td>
+                            <td>เปลี่ยนทิศทางการเล่น (จากตามเข็ม เป็นทวนเข็ม หรือกลับกัน)</td>
+                            <td>มีผลทันที</td>
+                        </tr>
+                        <tr>
+                            <td>คะแนนทั้งหมด 2 เท่า</td>
+                            <td>ผู้ที่แตะได้ จะได้สิทธิ์คูณ 2 คะแนนรวมทั้งหมดของตนเมื่อจบเกม</td>
+                            <td>เก็บการ์ดนี้ไว้ในกองคะแนน เป็นเครื่องหมาย</td>
+                        </tr>
+                    </tbody>
+                </table>
+                [cite_start]<p><em>(หมายเหตุ: การ์ดพิเศษในไฟล์ PDF เช่น "เคาะจังหวะท้าทาย" [cite: 48] อาจเป็นส่วนเสริม
+                        หรือใช้ในกติกาแบบอื่น)</em></p>
+
+
+                <h3 class="section-title">7. การจบเกมและการให้คะแนน</h3>
+                <p>เกมจะจบลงเมื่อเงื่อนไขใดเงื่อนไขหนึ่งต่อไปนี้เป็นจริง:</p>
+                <ol>
+                    <li>การ์ดในกองจั่วหมด และผู้เล่นคนใดคนหนึ่งการ์ดหมดมือ</li>
+                    [cite_start]<li>ผู้เล่นคนใดคนหนึ่งสะสมหมวดหมู่ (ตามที่ระบุบนการ์ด) ครบตามที่กำหนด (เช่น 3 หมวด)
+                        [cite: 49] (หากใช้กติกาเสริมจาก PDF)</li>
+                    <li>ครู/ผู้คุมเกม กำหนดเวลา (เช่น 20 นาที)</li>
+                </ol>
+                <p>เมื่อจบเกม ให้คำนวณคะแนนดังนี้:</p>
+                <pre style="background:#fafafa;padding:12px;border-radius:6px; border: 1px solid #eee;">
+คะแนนรวม = (ผลรวมค่าการ์ดในกองคะแนน + คะแนนพิเศษจากการ์ดความรู้)
+            × ตัวคูณพิเศษ (ถ้าได้การ์ด x2)
+            − ผลรวมค่าการ์ดที่เหลือบนมือ
+</pre>
+                <ul>
+                    <li>การ์ดในกองคะแนน: นับแต้มตามตัวเลขบนการ์ดเครื่องดนตรีและการ์ดความรู้</li>
+                    <li>การ์ดที่เหลือบนมือ: นำแต้มบนการ์ดเครื่องดนตรีที่เหลือมาหักลบ (การ์ดความรู้/พิเศษบนมือ อาจนับเป็น
+                        -1 หรือ -2 แล้วแต่ตกลง)</li>
+                    <li>ผู้ที่มีคะแนนรวมสูงสุดเป็นผู้ชนะ</li>
+                </ul>
+
+                <h3 class="section-title">8. กรณีเสมอและบทลงโทษ</h3>
+                <ol>
+                    <li><strong>กรณีเสมอ:</strong> หากคะแนนรวมเท่ากัน ให้ตัดสินโดย:
+                        <ol type="a">
+                            <li>ผู้ที่มีการ์ดคะแนนสูงสุด (เช่น การ์ด 3 คะแนน) ในกองคะแนน มากที่สุด</li>
+                            <li>หากยังเสมอ ให้นับจำนวนการ์ดความรู้ที่ตอบถูก ใครมากที่สุดชนะ</li>
+                        </ol>
+                    </li>
+                    <li><strong>บทลงโทษ:</strong> หากมีการแย่งตอบที่รุนแรง หรือพฤติกรรมไม่เหมาะสม ครู/ผู้จัด
+                        มีสิทธิ์ตักเตือน หรือหักคะแนนตามความเหมาะสม</li>
+                </ol>
+
+                <h3 class="section-title">9. ตัวอย่างการเล่น (ตามกติกาโค้ดล่าสุด)</h3>
+                <p>ผู้เล่น A, B, C / การ์ดบนสุดในกองคะแนนของ Player A คือ (ระนาดเอก 3 คะแนน)</p>
+                <ol>
+                    <li><strong>ตา Player B:</strong> B มีแต่การ์ด (ซอด้วง 1 คะแนน) ซึ่งน้อยกว่า 3 จึงเล่นตามปกติไม่ได้
+                    </li>
+                    [cite_start]<li>B ตัดสินใจเล่น **การ์ดความรู้** (ถามเกี่ยวกับจังหวะ) [cite: 23] ลงกลางวง แล้วนับ
+                        "3..2..1"</li>
+                    <li><strong>แย่งตอบ:</strong> Player C แตะการ์ดได้ก่อน</li>
+                    [cite_start]<li><strong>Player C ตอบ:</strong> ตอบถูก [cite: 46] C
+                        จึงได้การ์ดความรู้ใบนั้นไปไว้ในกองคะแนนของตน</li>
+                    <li><strong>ตา Player C:</strong> (ตานี้เป็นตาปกติของ C) C ต้องเล่นการ์ด >= 3
+                        (เพราะการ์ดล่าสุดที่ลงกองคะแนนคือ 3 ของ A) C ไม่มี จึงผ่าน และจั่ว 1 ใบ</li>
+                    <li><strong>ตา Player A:</strong> (กลับมาที่ A) A ต้องเล่นการ์ด >= 3 ... (เล่นต่อไป)</li>
+                </ol>
+
+                <h3 class="section-title">10. เคล็ดลับสำหรับครู (จากหลักการออกแบบนวัตกรรม)</h3>
+                <ul>
+                    [cite_start]<li>ก่อนเล่น ควรสอนคำศัพท์หรือทบทวนชื่อเครื่องดนตรี และหมวดหมู่ (ดีด สี ตี เป่า) [cite:
+                        42] ก่อน</li>
+                    [cite_start]<li><strong>เชื่อมโยงการฟัง (Visual-Auditory Link):</strong> หากการ์ดมี QR Code [cite:
+                        34] [cite_start]สนับสนุนให้นักเรียนสแกนฟังเสียงเครื่องดนตรีจริงเพื่อช่วยในการจดจำ [cite: 34]
+                    </li>
+                    [cite_start]<li><strong>เชื่อมโยงการกระทำ (Action-Knowledge Link):</strong> กระตุ้นให้ผู้เรียน
+                        "ลงมือเล่น" [cite: 35] [cite_start]เช่น เมื่อมีการ์ดคำถามเกี่ยวกับจังหวะ [cite: 23]
+                        [cite_start]ให้ลองเคาะจังหวะนั้น [cite: 35] หรือทำท่าทางประกอบเครื่องดนตรีเมื่อวางการ์ด</li>
+                    <li>กำหนดเวลาเล่นที่ชัดเจน (เช่น 20-30 นาที) เพื่อให้เหมาะกับคาบเรียน</li>
+                </ul>
+
+                <h3 class="section-title">11. รูปแบบการเล่น (Variants)</h3>
+                <ul>
+                    <li><strong>เล่นสั้น (Quick Play):</strong> แจก 3 ใบต่อคน และ/หรือ ตัดการ์ดพิเศษที่ซับซ้อนออก</li>
+                    [cite_start]<li><strong>เล่นทีม (Team Play):</strong> จับคู่ 2 คน [cite: 37]
+                        ช่วยกันเล่นและรวมคะแนนกัน</li>
+                    [cite_start]<li><strong>โหมดสร้างสรรค์ (Scalable Design):</strong> สามารถออกแบบการ์ดใหม่ๆ
+                        เพิ่มเติมในอนาคต เช่น การ์ดเพลงพื้นบ้าน หรือเพลงร่วมสมัย [cite: 38]</li>
+                </ul>
+
+            </section>
+
+            <aside>
+                <div class="card" style="position: sticky; top: 20px;">
+                    <h3>เครื่องมือช่วย & ลิงก์</h3>
+                    <div>
+                        <label for="collected">คะแนนที่วางไว้ (เช่น 3,2,1,1)</label>
+                        <input id="collected" type="text" placeholder="เช่น 3,2,1,1">
+                    </div>
+                    <div style="margin-top:12px">
+                        <label for="remaining">ค่าการ์ดที่เหลือบนมือ (หักลบ)</label>
+                        <input id="remaining" type="text" placeholder="เช่น 1,2">
+                    </div>
+                    <div style="margin-top:14px;display:flex;gap:8px">
+                        <button onclick="calcScore()">คำนวณคะแนน</button>
+                        <button onclick="resetForm()" class="reset">รีเซ็ต</button>
+                    </div>
+                    <div id="result" style="margin-top:14px;font-weight:700; font-size: 1.1rem;"></div>
+
+                    <hr style="margin:20px 0">
+                    <h4>ไฟล์อ้างอิง (ที่อัปโหลด)</h4>
+                    <div class="pdf-links">
+                        <a href="/mnt/data/ดนตรีไทยท้าทายไพ่ความรู้.pdf"
+                            target="_blank">ดนตรีไทยท้าทายไพ่ความรู้.pdf</a>
+                        <a href="/mnt/data/การ์ดเกมดนตรีไทย - นวัตกรรม Final.pdf" target="_blank">การ์ดเกมดนตรีไทย -
+                            นวัตกรรม Final.pdf</a>
+                    </div>
+
+                    <hr style="margin:20px 0">
+                    <h4>ตั้งค่าเกม (ตัวอย่าง)</h4>
+                    <label for="players">จำนวนผู้เล่น</label>
+                    <input type="number" id="players" value="4" min="2" max="8">
+                    <small style="display:block;margin-top:8px;color:var(--muted)">ใช้สำหรับอ้างอิงการปรับกติกา</small>
+                </div>
+            </aside>
+        </main>
+
+        <section style="margin-top:18px" class="card">
+            <h3>คู่มือครู (สรุปการเตรียมการสอน)</h3>
+            <ol>
+                <li><strong>เวลาเตรียม:</strong> 5–10 นาที (สับการ์ดและอธิบายกติกา)</li>
+                <li><strong>เวลาเล่น:</strong> 20–30 นาที (ปรับตามความเหมาะสมของคาบเรียน)</li>
+                [cite_start]<li><strong>วัตถุประสงค์การเรียนรู้ (ตัวอย่าง):</strong>
+                    ผู้เรียนสามารถจดจำและจำแนกเครื่องดนตรีไทย [cite: 22] [cite_start]ได้อย่างน้อย 5 ชนิด,
+                    ตอบคำถามพื้นฐานเกี่ยวกับจังหวะของไทยได้ [cite: 23]</li>
+                [cite_start]<li><strong>การประเมิน:</strong> สังเกตการมีส่วนร่วม, ความถูกต้องในการตอบคำถาม [cite:
+                    46][cite_start], และการทำงานร่วมกัน [cite: 32]</li>
+            </ol>
+        </section>
+
+        <footer>
+            สร้างโดย: Gemini (AI) — คู่มือนี้ถูกสร้างขึ้นโดยอ้างอิงกติกาจากโค้ด HTML ที่ผู้ใช้ให้มาเป็นหลัก
+            และผสานแนวคิดจากไฟล์ PDF ที่แนบมา
+        </footer>
+    </div>
+
+    <script>
+        function parseList(str) {
+            if (!str) return [];
+            return str.split(',').map(s => parseInt(s.trim() || '0') || 0);
+        }
+
+        function calcScore() {
+            const collectedInput = document.getElementById('collected').value;
+            const remainingInput = document.getElementById('remaining').value;
+
+            const collected = parseList(collectedInput);
+            const remaining = parseList(remainingInput);
+
+            const sumCollected = collected.reduce((a, b) => a + b, 0);
+            const sumRemaining = remaining.reduce((a, b) => a + b, 0);
+
+            // หมายเหตุ: ฟังก์ชันนี้ยังไม่ได้รวมการ์ดคูณ 2 (x2)
+            // หากต้องการให้แม่นยำขึ้น อาจต้องเพิ่มช่องติ๊ก "มีการ์ด x2 หรือไม่"
+            const total = sumCollected - sumRemaining;
+
+            const resultEl = document.getElementById('result');
+            if (isNaN(total)) {
+                resultEl.innerText = 'โปรดใส่ตัวเลขที่ถูกต้อง (คั่นด้วย comma)';
+                resultEl.style.color = 'red';
+            } else {
+                resultEl.innerText = `คะแนนรวม: ${total} (รวม ${sumCollected} - หัก ${sumRemaining})`;
+                resultEl.style.color = 'var(--accent)';
+            }
+        }
+
+        function resetForm() {
+            document.getElementById('collected').value = '';
+            document.getElementById('remaining').value = '';
+            const resultEl = document.getElementById('result');
+            resultEl.innerText = '';
+            resultEl.style.color = 'var(--accent)';
+        }
+    </script>
+</body>
+
+</html>
