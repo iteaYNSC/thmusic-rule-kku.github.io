@@ -1,0 +1,296 @@
+/*
+ * Professional Stylesheet for "ดนตรีไทยท้าทาย" (Thai Music Challenge) Guide
+ * Version: 1.0
+ * Description: A clean, responsive, and maintainable CSS file.
+ */
+
+/* 1. Root Variables
+--------------------------------------------- */
+:root {
+  /* Colors */
+  --accent-color: #2b7a78;
+  --accent-hover: #1e5755;
+  --accent-light: #f3f7f6;
+  --background-color: #fcfbf8;
+  --card-background: #ffffff;
+  --text-primary: #111111;
+  --text-secondary: #222222;
+  --text-muted: #666666;
+  --border-color: #eeeeee;
+  --border-input: #dddddd;
+  --shadow-color: rgba(10, 10, 10, 0.06);
+
+  /* Typography */
+  --font-family-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+
+  /* Sizing & Transitions */
+  --border-radius-m: 8px;
+  --border-radius-l: 12px;
+  --transition-speed: 0.2s ease;
+}
+
+/* 2. Global Resets & Typography
+--------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 24px;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px 0;
+  color: var(--text-secondary);
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 1.6rem;
+  color: var(--accent-color);
+  margin: 0;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul, ol {
+  padding-left: 24px;
+}
+
+li {
+  margin: 8px 0;
+}
+
+ol ol li, ul ul li {
+  margin-top: 6px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border-color);
+  margin: 20px 0;
+}
+
+/* 3. Layout Structure
+--------------------------------------------- */
+.wrap {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  border-bottom: 2px solid var(--accent-light);
+  padding-bottom: 16px;
+}
+
+.intro {
+  margin: 12px 0 0 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Sidebar: Make the card inside sticky */
+aside .card {
+  position: sticky;
+  top: 24px; /* Match body padding */
+}
+
+footer {
+  margin-top: 24px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
+}
+
+/* 4. Components
+--------------------------------------------- */
+.card {
+  background: var(--card-background);
+  border-radius: var(--border-radius-l);
+  padding: 20px 24px;
+  box-shadow: 0 6px 18px var(--shadow-color);
+}
+
+.section-title {
+  border-left: 4px solid var(--accent-color);
+  padding-left: 12px;
+  margin: 24px 0 16px 0;
+  font-size: 1.4rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  font-size: 0.95rem;
+}
+
+table th,
+table td {
+  border: 1px solid var(--border-color);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+table th {
+  background: var(--accent-light);
+  font-weight: 600;
+}
+
+pre {
+  background: #fafafa;
+  padding: 12px;
+  border-radius: var(--border-radius-m);
+  border: 1px solid var(--border-color);
+  overflow-x: auto;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.pdf-links a {
+  display: block;
+  color: var(--accent-color);
+  font-weight: 600;
+  margin: 6px 0;
+}
+
+/* 5. Forms & Interactive Elements
+--------------------------------------------- */
+label {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+input[type="number"],
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: var(--border-radius-m);
+  border: 1px solid var(--border-input);
+  transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px var(--accent-light);
+  outline: none;
+}
+
+button {
+  background: var(--accent-color);
+  color: white;
+  border: 0;
+  padding: 10px 14px;
+  border-radius: var(--border-radius-m);
+  cursor: pointer;
+  font-weight: 600;
+  font-family: inherit;
+  transition: background-color var(--transition-speed);
+}
+
+button:hover {
+  background: var(--accent-hover);
+}
+
+button.reset {
+  background: #aaa;
+}
+
+button.reset:hover {
+  background: #888;
+}
+
+/* Accessibility Focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+  box-shadow: none; /* Remove default focus shadows if any */
+}
+
+/* Specific ID for score result */
+#result {
+  margin-top: 14px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--accent-color); /* Default color */
+  transition: color var(--transition-speed);
+}
+
+/* 6. Responsive Design
+--------------------------------------------- */
+@media (max-width: 880px) {
+  .grid {
+    /* Switch to a single column layout */
+    grid-template-columns: 1fr;
+  }
+  
+  /* Un-stick the sidebar on mobile so it flows naturally */
+  aside .card {
+    position: static;
+    top: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 16px; /* Reduce padding on small screens */
+  }
+  
+  .card {
+     padding: 16px;
+  }
+  
+  h1 {
+    font-size: 1.4rem;
+  }
+  
+  .section-title {
+    font-size: 1.25rem;
+  }
+}
